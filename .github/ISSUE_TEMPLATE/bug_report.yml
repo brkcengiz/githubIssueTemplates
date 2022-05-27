@@ -1,0 +1,59 @@
+name: Bug-🐛
+description: File a bug here
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: new-bug
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+      - label: I checked existing issues
+        required: false
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Description of the bug
+      description: Please describe the bug you encountered
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps To Reproduce
+      description: Please write down the steps for reproducing the bug.
+      placeholder: Reproduce Steps
+    validations:
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Please write down what should be happen.
+    validations:
+      required: false
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Which environment you found the bug?
+      description: Please select the environment. If you face it on multiple environments please select all.
+      multiple: true
+      options:
+       - DEV
+       - TEST
+       - PROD
+    validations:
+      required: true
+  - type: dropdown
+    id: Severity
+    attributes:
+      label: Severity of the bug?
+      description: Please select the severity for this bug.
+      multiple: false
+      options:
+       - high
+       - mid
+       - low
+    validations:
+      required: true
