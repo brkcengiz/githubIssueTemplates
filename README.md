@@ -1,4 +1,4 @@
-# githubIssueTemplates
+# Issue Templates
 
 **This is a repository for bug and feature request templates.**
 
